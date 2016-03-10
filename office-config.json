@@ -1,0 +1,143 @@
+{
+    "bridge": {
+        "name": "TestBridge",
+        "username": "DD:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+    
+    "description": "This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.",
+
+    "accessories": [
+        {
+            "accessory": "Sonos",
+            "name": "колонка",
+	    "room": "tech",
+	    "udn":"RINCON_5CAAFD6FB87401400"
+        },
+        {
+            "accessory":"Http",
+            "name": "занавеска",
+            "room":"Living",
+            "switchHandling":"yes",
+            "http_method":"POST",
+            "on_url": "http://192.168.99.105:8080/ON_Cur",
+            "off_url": "http://192.168.99.105:8080/OFF_Cur",
+            "status_url":"http://192.168.99.105:8080/status", 
+            "service":"Switch",
+            "brightnessHandling":"no",
+            "bightness_url":"http://192.168.99.105/bright/%b",
+            "brightnesslvl_url":"http://192.168.99.105/bright/s",
+            "sendimmediately":"",
+            "username":"",
+            "password":""
+	},
+        {
+           "accessory":"Http",
+           "name":"shade",
+           "switchHandling":"yes",
+           "http_method":"POST",
+           "on_url":"http://192.168.99.105:8080/ON_Cur",
+           "off_url":"http://192.168.99.105:8080/OFF_Cur",
+           "status_url":"http://192.168.99.105/status",
+           "service":"Switch"
+        },
+        {
+         "accessory":"Http",
+         "name":"свет",
+         "room":"tech",
+         "switchedHandling":"yes",
+         "http_method":"POST",
+         "on_url":"http://192.168.99.105:8080/Living_light_on",
+         "off_url":"http://192.168.99.105:8080/Living_light_off",
+         "status_url":"http://192.168.99.105:8080/Living_status",
+         "service":"Light",
+         "brightnessHandling":"no",
+         "brightness_url":"http://192.168.99.105:8080/Living_bright/%b",
+         "brightnesslvl_url":"http://192.168.99.105:8080/Living_bright/s",
+         "sendimmediately":"",
+         "username":"",
+         "password":""
+         },
+         {
+         "accessory":"Http",
+         "name":"шторы",
+         "room":"tech",
+         "switchHandling":"yes",
+         "http_method":"POST",
+         "on_url":"http://192.168.99.105:8080/Living_cur_on",
+         "off_url":"http://192.168.99.105:8080/Living_cur_off",
+         "status_url":"http://192.168.99.105:8080/Living_cur_status",
+         "service":"Switch"
+         },
+         {
+         "accessory":"Http",
+         "name":"curtains",
+         "switchHandling":"yes",
+         "http_method":"POST",
+         "on_url":"http://192.168.99.105:8080/Living_cur_on",
+         "off_url":"http://192.168.99.105:8080/Living_cur_off",
+         "status_url":"http://192.168.99.105:8080/Living_cur_status",
+         "service":"Switch"
+         },
+         {
+         "accessory":"Http",
+         "name":"тв",
+         "switchHandling":"yes",
+         "http_method":"POST",
+         "on_url":"http://192.168.99.105:8080/Living_tv_on",
+         "off_url":"http://192.168.99.105:8080/Living_tv_off",
+         "status_url":"http://192.168.99.105:8080/Living_tv_status",
+         "service":"Switch"
+         },
+         {
+         "accessory":"Http",
+         "name":"TV",
+         "switchHandling":"yes",
+         "http_method":"POST",
+         "on_url":"http://192.168.99.105:8080/Living_tv_on",
+         "off_url":"http://192.168.99.105:8080/Living_tv_off",
+         "status_url":"http://192.168.99.105:8080/Living_tv_status",
+         "service":"Switch"
+         },
+         {
+         "accessory":"Http",
+         "name":"PlayStation",
+         "switchHandling":"yes",
+         "http_method":"POST",
+         "on_url":"http://192.168.99.105:8080/Living_PS_on",
+         "off_url":"http://192.168.99.105:8080/Living_PS_off",
+         "status_url":"http://192.168.99.105:8080/Living_PS_status",
+         "service":"Switch"         
+         },
+         {
+         "accessory":"Http",
+         "name":"Blu-ray",
+         "switchHandling":"yes",
+         "http_method":"POST",
+         "on_url":"http://192.168.99.105:8080/Living_BR_on",
+         "off_url":"http://192.168.99.105:8080/Living_BR_off",
+         "status_url":"http://192.168.99.105:8080/Living_BR_status",
+         "service":"Switch"       
+         },
+         {
+         "accessory":"Http",
+         "name":"всё",
+         "switchHandling":"yes",
+         "http_method":"POST",
+         "on_url":"http://192.168.99.105:8080/ALL_DEV_ON",
+         "off_url":"http://192.168.99.105:8080/ALL_DEV_OFF",
+         "status_url":"http://192.168.99.105:8080/ALL_DEV_STAT",
+         "service":"Switch"
+         },
+         {"accessory":"Http",
+          "name":"all",
+          "swithHandling":"yes",
+          "http_method":"POST",
+          "on_url":"http://192.168.99.105:8080/ALL_DEV_ON",
+          "on_url":"http://192.168.99.105:8080/ALL_DEV_OFF",
+          "status_url":"http://192.168.99.105:8080/ALL_DEV_STAT",
+          "service":"Switch"
+         }
+    ]
+}
